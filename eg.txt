@@ -1,0 +1,143 @@
+To decode the message "CVWMQI" using the Affine cipher with slope \( A = 5 \) and intercept \( B = 8 \), follow these steps:
+
+### Step-by-Step Decryption
+
+1. **Affine Cipher Decryption Formula:**
+   \[
+   D(y) = A^{-1} \times (y - B) \mod 26
+   \]
+   Here, \( A = 5 \), \( B = 8 \), and \( A^{-1} \) is the modular multiplicative inverse of \( 5 \mod 26 \).
+
+2. **Find \( A^{-1} \):**
+   The modular multiplicative inverse of \( 5 \mod 26 \) is \( 21 \), because \( 5 \times 21 \equiv 1 \mod 26 \).
+
+3. **Apply the Decryption Formula:**
+
+   - Convert each letter in the encoded message to its numeric equivalent (A = 0, B = 1, ..., Z = 25).
+
+   - Perform the decryption calculation for each letter.
+
+   - Convert the result back to a letter.
+
+### Decryption Calculations
+
+For each letter in "CVWMQI":
+
+1. **C (encoded = 2):**
+   \[
+   D(2) = 21 \times (2 - 8) \mod 26 \\
+   D(2) = 21 \times (-6) \mod 26 \\
+   D(2) = 21 \times 20 \mod 26 \\
+   D(2) = 420 \mod 26 = 4 \quad (\text{E})
+   \]
+
+2. **V (encoded = 21):**
+   \[
+   D(21) = 21 \times (21 - 8) \mod 26 \\
+   D(21) = 21 \times 13 \mod 26 \\
+   D(21) = 273 \mod 26 = 13 \quad (\text{N})
+   \]
+
+3. **W (encoded = 22):**
+   \[
+   D(22) = 21 \times (22 - 8) \mod 26 \\
+   D(22) = 21 \times 14 \mod 26 \\
+   D(22) = 294 \mod 26 = 8 \quad (\text{I})
+   \]
+
+4. **M (encoded = 12):**
+   \[
+   D(12) = 21 \times (12 - 8) \mod 26 \\
+   D(12) = 21 \times 4 \mod 26 \\
+   D(12) = 84 \mod 26 = 6 \quad (\text{G})
+   \]
+
+5. **Q (encoded = 16):**
+   \[
+   D(16) = 21 \times (16 - 8) \mod 26 \\
+   D(16) = 21 \times 8 \mod 26 \\
+   D(16) = 168 \mod 26 = 12 \quad (\text{M})
+   \]
+
+6. **I (encoded = 8):**
+   \[
+   D(8) = 21 \times (8 - 8) \mod 26 \\
+   D(8) = 21 \times 0 \mod 26 \\
+   D(8) = 0 \mod 26 = 0 \quad (\text{A})
+   \]
+
+### Result
+
+The decoded message is "ENIGMA".
+
+### Updated HTML with Correct Example
+
+```html
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<h1>Stage Seven</h1>
+
+<p>Decode the text obtained from stage six using the <b>Affine Cipher</b> with slope <b>A = 5</b> and intercept <b>B = 8</b>:</p>
+
+<p><strong>About Affine Cipher:</strong></p>
+<p>The Affine cipher is a type of monoalphabetic substitution cipher, where each letter in an alphabet is mapped to its numeric equivalent, encrypted using a linear function, and then converted back to a letter. The encryption function is defined as <b>E(x) = (Ax + B) mod 26</b>, and the decryption function is <b>D(y) = A<sup>-1</sup> (y - B) mod 26</b>, where <b>A<sup>-1</sup></b> is the modular multiplicative inverse of <b>A</b> modulo 26.</p>
+
+<p><strong>Steps to Decode Using Affine Cipher:</strong></p>
+<ol>
+    <li>Identify the values for <b>A</b> and <b>B</b>. For this stage, <b>A = 5</b> and <b>B = 8</b>.</li>
+    <li>Find the modular multiplicative inverse of <b>A</b> modulo 26. For <b>A = 5</b>, this is 21.</li>
+    <li>Use the decryption function <b>D(y) = A<sup>-1</sup> (y - B) mod 26</b> to decode each letter. Subtract <b>B</b> from the numeric value of each letter in the encoded message, multiply by <b>A<sup>-1</sup></b>, and then apply modulo 26.</li>
+    <li>Convert the resulting numbers back to letters to get the decoded message.</li>
+    <li>Enter the decoded message in the input field below and submit to proceed to the next stage.</li>
+</ol>
+
+Read more about Affine Cipher <a target="_blank" href="https://www.geeksforgeeks.org/implementation-affine-cipher/">here</a>.
+
+<br><br>
+
+<p><strong>Example:</strong></p>
+<p>Let's decode the message <b>“CVWMQI”</b> using the Affine cipher with <b>A = 5</b> and <b>B = 8</b>.</p>
+
+<p><strong>Steps:</strong></p>
+<ol>
+    <li>Find the modular multiplicative inverse of <b>A = 5</b>, which is <b>21</b>.</li>
+    <li>Write down the encoded message and key:</li>
+</ol>
+
+<pre>
+Encoded:  C  V  W  M  Q  I
+Key:      A = 5, B = 8
+A<sup>-1</sup> = 21
+</pre>
+
+<ol start="2">
+    <li>Apply the decryption formula for each letter:</li>
+    <ul>
+        <li>C (encoded) = 2, apply <b>D(y) = 21 * (2 - 8) mod 26</b> = 12 (M)</li>
+        <li>V (encoded) = 21, apply <b>D(y) = 21 * (21 - 8) mod 26</b> = 13 (N)</li>
+        <li>W (encoded) = 22, apply <b>D(y) = 21 * (22 - 8) mod 26</b> = 8 (I)</li>
+        <li>M (encoded) = 12, apply <b>D(y) = 21 * (12 - 8) mod 26</b> = 6 (G)</li>
+        <li>Q (encoded) = 16, apply <b>D(y) = 21 * (16 - 8) mod 26</b> = 12 (M)</li>
+        <li>I (encoded) = 8, apply <b>D(y) = 21 * (8 - 8) mod 26</b> = 0 (A)</li>
+    </ul>
+    <li>The decoded message is: <b>“ENIGMA”</b></li>
+</ol>
+
+<br>
+Now try this: <br> <br>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="code">Enter Code:</label>
+        <input type="text" class="form-control" id="code" name="code">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br><br>
+
+{% endblock %}
+```
+
+This example shows the correct decryption process for the message "CVWMQI" using the Affine cipher with the given parameters.

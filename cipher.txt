@@ -1,0 +1,25 @@
+--. ... -. -. -.-. .- - - -. ..-. .-. -. .- --- -.-. ..-.
+morse to alphabet
+
+GSNNCATTNFRNAOCF
+Reverse
+
+FCOANRFNTTACNNSG
+Ceaser Key 7
+
+YVHTGKYGMMTVGGLZ
+Rail Fence Key 3
+
+YGGKVYGGHMLMTTZV
+Atbash Cipher
+
+BTTPEBTTSNONGGAE
+Vigenere Key Crypto
+
+ZCVALNRCUYVZEPCP
+Affine Slope A = 5 Intercept B = 8
+
+TENOLBHESYNTURER
+Rot13
+
+GRABYOURFLAGHERE
